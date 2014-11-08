@@ -16,7 +16,7 @@ var geoloc ={
 		geoloc.lat=position.coords.latitude;
         geoloc.lon=position.coords.longitude;
 		
-		if(geoloc.lat != null && geoloc.lon != null){
+		if(geoloc.lat != undefined && geoloc.lon != undefined){
 		//Posición del mapa
 				var latlng = new google.maps.LatLng(geoloc.lat, geoloc.lon);
 				var myOptions = {
