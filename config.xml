@@ -9,7 +9,8 @@
         <!-- versionCode is optional and Android only -->
 
         <preference name="phonegap-version" value="3.6.3" />
-		<icon src="icon.png" \>
+
+		<icon src="icon.png"></icon>
 
         <name>geoApp</name>
 
@@ -20,6 +21,7 @@
         <author href="http://cenet.mx" email="amram_x@hotmail.com">
         Amram L. Ochoa
         </author>
+		
 		
 		<gap:plugin name="org.apache.cordova.geolocation" />
 
