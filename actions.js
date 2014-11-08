@@ -6,16 +6,15 @@ navigator.geolocation.getCurrentPosition(geoloc.onSuccess, geoloc.onError);
 
 	}
 };
-$(geoloc.deviceready);
 
 var geoloc ={
-	lat: null,
-	lon: null,
-	deviceready: function(){
+
+	device: function(){
 		document.addEventListener('deviceready',fn.init,false);
 	},
 	onSuccess: function(position) {
-		
+		geoloc.lat=position.coords.latitude;
+        geoloc.lon=position.coords.longitude;
 		
 		if(geoloc.lat != null && geoloc.lon != null){
 		//Posición del mapa
@@ -36,10 +35,6 @@ var geoloc ={
 		$('#map_canvas').text('Error al asignar latitud y longitud');
 	}
 		
-		
-		
-    	geoloc.lat=position.coords.latitude;
-        geoloc.lon=position.coords.longitude;
 	},
 	
 	onError: function(error) {
